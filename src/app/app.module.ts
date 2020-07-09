@@ -11,6 +11,7 @@ import { FooterComponent } from './app-footer/app-footer.component';
 import { AppBlogComponent } from './app-blog/app-blog.component';
 import { AppCalendarComponent } from './app-calendar/app-calendar.component';
 import { AppMainComponent } from './app-main/app-main.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AppMainComponent } from './app-main/app-main.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
