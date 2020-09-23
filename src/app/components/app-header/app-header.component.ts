@@ -7,9 +7,16 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit, AfterViewInit {
 
-  constructor() { }
+  public isMenuCollapsed: boolean;
+
+  constructor() {
+    this.isMenuCollapsed = true;
+  }
 
   ngOnInit(): void {
+  }
+
+  ngAfterViewInit() {
   }
 
 
