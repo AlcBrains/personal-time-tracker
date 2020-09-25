@@ -38,6 +38,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   background: rgba(60, 60, 60, 0.4);
 }
 
+ul {
+  list-style-type: none;
+}
+
 .logo {
   color: rgb(255, 208, 0);
   //margin-left: 2%;

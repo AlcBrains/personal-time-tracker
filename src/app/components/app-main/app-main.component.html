@@ -2,8 +2,8 @@
 <div class="container">
   <app-header></app-header>
   <div class="row small-margin-top">
-    <div class="col-sm-6 ">
-      <h2>Stats, Briefly</h2>
+    <div class="col-sm-6">
+      <h2 class="with-color">Stats, Briefly</h2>
       <p class="textBackground">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse praesentium
         fugit,perferendis, aliquam sapiente vel maiores optio consequatur commodi ratione natus aliquid rerum ducimus!
         Consectetur, ducimus! Asperiores fugit facilis
@@ -14,15 +14,9 @@
       </p>
     </div>
     <div class="col-sm-6">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-6">
-      <h2 class="small-margin-top">RSS Feed</h2>
-    </div>
-    <div class="col-sm-6">
-      <ul>
-        <li *ngFor="let o of rssData?.rss.channel[0].item"><a href="{{o.link[0]}}">{{o.title[0]}}</a></li>
+      <h2 class="with-color">RSS Feed</h2>
+      <ul class="textBackground">
+        <li *ngFor="let o of rssData"><a href="{{o.link[0]}}">{{o.title[0]}} </a></li>
       </ul>
     </div>
   </div>
@@ -40,7 +34,7 @@
     </div>
     <div class="col-sm-6 text-center">
       <figure>
-        <img src="assets/img/inspirational.jpg" alt="inspirational" class="imgInsp">
+        <img src="assets/inspirational.jpg" alt="inspirational" class="imgInsp">
         <figcaption class="caption large-left-right-xs-top">"Dare to jump where others have jumped too"</figcaption>
       </figure>
     </div>
