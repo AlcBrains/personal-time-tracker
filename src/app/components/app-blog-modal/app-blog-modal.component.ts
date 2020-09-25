@@ -1,36 +1,21 @@
-import {Component, OnInit} from '@angular/core';
-import {ModalDismissReasons, NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {Component} from '@angular/core';
+import {NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-blog-modal',
   templateUrl: './app-blog-modal.component.html',
   styleUrls: ['./app-blog-modal.component.scss']
 })
-export class AppBlogModalComponent implements OnInit {
+export class AppBlogModalComponent  {
 
-  constructor(private modalService: NgbModal) {}
 
-  public closeResult: string;
+  constructor(private modalService: NgbActiveModal) {}
 
-  private static getDismissReason(reason: any): string {
-    if (reason === ModalDismissReasons.ESC) {
-      return 'by pressing ESC';
-    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-      return 'by clicking on a backdrop';
-    } else {
-      return `with: ${reason}`;
-    }
+  public save(): void {
+    this.modalService.close();
   }
 
-  ngOnInit(): void {
+  public dismiss(): void {
+    this.modalService.close();
   }
-
-  open(content) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
-      this.closeResult = `Closed with: ${result}`;
-    }, (reason) => {
-      this.closeResult = `Dismissed ${AppBlogModalComponent.getDismissReason(reason)}`;
-    });
-  }
-
 }
