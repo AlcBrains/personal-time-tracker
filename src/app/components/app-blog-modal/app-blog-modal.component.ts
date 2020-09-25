@@ -19,8 +19,10 @@ export class AppBlogModalComponent {
 
 
   public save(): void {
-    this.callsService.save({title: this.title.value, content: this.body.value, createdAt: new Date()}).pipe(take(1)).subscribe();
-    this.modalService.close();
+    this.callsService.save({title: this.title.value, content: this.body.value, createdAt: new Date()}).pipe(take(1)).subscribe(() => {
+      this.modalService.close();
+    });
+
   }
 
   public dismiss(): void {
