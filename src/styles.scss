@@ -14,14 +14,20 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .homeBodyBackground {
   background-image: url("assets/homePage.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 .activity-with-background {
   background-image: url("assets/timeTracking.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 .feedsBodyBackground {
   background-image: url("assets/feedsPage.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 .opaque-background {
@@ -34,7 +40,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .logo {
   color: rgb(255, 208, 0);
-  margin-left: 2%;
+  //margin-left: 2%;
+}
+
+.with-color {
+  color: rgb(10, 9, 9);
 }
 
 .textBackground {
