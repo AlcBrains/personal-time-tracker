@@ -12,6 +12,8 @@ import { AppCalendarComponent } from './components/app-calendar/app-calendar.com
 import { AppMainComponent } from './components/app-main/app-main.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {AppBlogModalComponent} from './components/app-blog-modal/app-blog-modal.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,10 @@ import {AppBlogModalComponent} from './components/app-blog-modal/app-blog-modal.
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

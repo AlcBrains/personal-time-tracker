@@ -3,7 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 
 @Injectable({providedIn: 'root'})
-export class CarService {
+export class PostService {
   public API = '//localhost:8080';
   public POST_API = this.API + '/posts';
 
@@ -19,13 +19,7 @@ export class CarService {
   }
 
   save(post: any): Observable<any> {
-    let result: Observable<any>;
-    if (post.href) {
-      result = this.http.put(post.href, post);
-    } else {
-      result = this.http.post(this.POST_API, post);
-    }
-    return result;
+    return this.http.post(this.POST_API + '/post', post);
   }
 
   remove(href: string) {

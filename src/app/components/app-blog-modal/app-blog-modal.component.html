@@ -1,5 +1,5 @@
 <div class="modal-header">
-  <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+  <h4 class="modal-title" id="modal-basic-title">Add a post</h4>
   <button type="button" class="close" aria-label="Close" (click)="dismiss()">
     <span aria-hidden="true">&times;</span>
   </button>
@@ -9,11 +9,11 @@
     <div class="form-group">
       <label for="title">Title</label>
       <div class="input-group">
-        <input id="title" class="form-control" type="text"/>
+        <input id="title" class="form-control" type="text"  [formControl]="title"/>
       </div>
       <label for="body">Body</label>
       <div class="input-group">
-        <textarea class="form-control" id="body" rows="3"></textarea>
+        <textarea class="form-control" id="body" rows="3" [formControl]="body"></textarea>
       </div>
     </div>
   </form>
