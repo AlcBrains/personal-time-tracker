@@ -14,14 +14,17 @@
       </p>
     </div>
     <div class="col-sm-6">
-      <img src="assets/img/Bar_Of_Pie_Chart.png" alt="PieChart" class="imgChart top-right-marginCol2">
     </div>
   </div>
   <div class="row">
     <div class="col-sm-6">
       <h2 class="small-margin-top">RSS Feed</h2>
     </div>
-    <div class="col-sm-6"></div>
+    <div class="col-sm-6">
+      <ul>
+        <li *ngFor="let o of rssData?.rss.channel[0].item"><a href="{{o.link[0]}}">{{o.title[0]}}</a></li>
+      </ul>
+    </div>
   </div>
   <div class="row tiny-margin-top">
     <div class="col-sm-6 ">
